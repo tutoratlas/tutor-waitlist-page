@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutor Atlas: Your PA for lessons, schedule, and payments</title>
+  <meta name="description" content="Get your evenings back from tuition admin. Tutor Atlas is a personalised AI agent — your PA for the book: lesson logs, schedule and payments, and paste-ready bills for WhatsApp. Built to become the trusted record across fragmented agency Telegram channels too. Join the waitlist.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://tutoratlas-waitlist-v2.vercel.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tutor Atlas">
+  <meta property="og:title" content="Tutor Atlas: Get your evenings back from tuition admin">
+  <meta property="og:description" content="Keep time for the human touch in tutoring. Your AI agent holds the book — lessons, schedule, payments, paste-ready bills — and is built to remember assignment attempts across agency Telegram channels. Join the waitlist.">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="https://tutoratlas-waitlist-v2.vercel.app/">
+  <meta property="og:image" content="https://tutoratlas-waitlist-v2.vercel.app/og-image.svg">
+  <meta property="og:image:alt" content="Tutor Atlas AI agent on standby for independent tutors">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tutor Atlas: Get your evenings back from tuition admin">
+  <meta name="twitter:description" content="Your PA for the book: lesson logs, schedule and payments, paste-ready WhatsApp bills — built to track assignment attempts across agency Telegram channels too.">
+  <meta name="twitter:image" content="https://tutoratlas-waitlist-v2.vercel.app/og-image.svg">
+
+  <meta name="theme-color" content="#070B10">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=tighten-problem-2">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Tutor Atlas",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Personalised AI agent for Singapore independent home tutors. Book of record for students, lessons, schedule and payments, with paste-ready bill text for WhatsApp. Built to handle tuition assignment flow with tutor confirmation after the daily driver lands.",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Independent home tutors in Singapore"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "price": "0",
+      "priceCurrency": "SGD",
+      "description": "Tutor waitlist for early access. Public pricing not listed."
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Tutor Atlas another tutoring marketplace?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Tutor Atlas is a personalised AI agent for tutors who already have students. It is not a parent marketplace and it does not redistribute your book."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the AI agent actually do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You get a personalised PA for your book of record: lessons logged while they are still fresh, schedule and payment context held for you, and paste-ready bill text for WhatsApp when month-end arrives — so you keep time for teaching instead of rebuilding a spreadsheet. The same agent is built to become your trusted record across public agency Telegram channels — watching for fits, helping you apply with your confirmation, and tracking what you have already tried. Daily lesson admin comes first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the AI agent handle tuition assignments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes in the product direction — same personalised agent as your lesson admin, not a second product. It is built to listen across public agency Telegram channels the instant fits post, format your details to each agency’s requirements, prepare an apply you still confirm, and remember attempts across channels that otherwise keep separate records. Lesson admin (students, schedule, payments) is the daily-driver first; assignment handling attaches later on that same agent. It is not a parent marketplace and it does not apply without your say-so."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will Tutor Atlas poach my students or share my book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your student book stays yours. Privacy and trust come first. We are not here to advertise your relationships."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do parents need an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not in the first release. You work with the agent; parents receive what you already send today — for example paste-ready bill text you copy into WhatsApp. The agent does not message parents for you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is Tutor Atlas for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Independent home tutors in Singapore who run their own students and want evenings back from admin — a clear book for lessons, schedule and payments, paste-ready bills for WhatsApp, and later on the same agent assignment-channel memory when you have capacity. If you mainly want a parent marketplace, this waitlist is not the right door."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is pricing listed here?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Public pricing is not on this page. Join the waitlist if fuss-free admin on standby fits how you already teach. We will share commercial details when early access is relevant."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="fluid-nav" aria-label="Primary">
+      <a class="brand" href="#top" aria-current="page">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Tutor Atlas</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-panel"
+        data-nav-toggle
+      >
+        <span class="nav-toggle-label">Menu</span>
+        <span class="hamburger" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <div class="nav-panel" id="nav-panel" data-nav-panel>
+        <ul class="nav-links">
+          <li style="--i: 0"><a href="#agent">What you get</a></li>
+          <li style="--i: 1"><a href="#assignments">Assignments</a></li>
+          <li style="--i: 2"><a href="#how">How it works</a></li>
+          <li style="--i: 3"><a href="#trust">Trust</a></li>
+          <li style="--i: 4"><a href="#waitlist">Waitlist</a></li>
+          <li style="--i: 5"><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn-nav" href="#waitlist">Join the waitlist</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-heading">
+      <div class="hero-atmosphere" aria-hidden="true">
+        <div class="sky"></div>
+        <div class="horizon"></div>
+        <div class="beams">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="scanlines"></div>
+        <div class="vignette"></div>
+      </div>
+
+      <div class="hero-stage" aria-hidden="true">
+        <div class="vm-chassis">
+          <div class="vm-chrome">
+            <span class="vm-dots"><i></i><i></i><i></i></span>
+            <span class="vm-title">atlas://agent · vm-standby</span>
+            <span class="vm-live"><i></i> online</span>
+          </div>
+          <div class="vm-body">
+            <div class="agent-figure">
+              <svg class="agent-svg" viewBox="0 0 220 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+                <defs>
+                  <linearGradient id="bodyGrad" x1="110" y1="40" x2="110" y2="300" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E8C07A" stop-opacity="0.95"/>
+                    <stop offset="0.45" stop-color="#C4893A" stop-opacity="0.55"/>
+                    <stop offset="1" stop-color="#1A2433" stop-opacity="0.15"/>
+                  </linearGradient>
+                  <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#FFE2A8"/>
+                    <stop offset="1" stop-color="#C4893A"/>
+                  </linearGradient>
+                  <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="4" result="b"/>
+                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                </defs>
+                <!-- halo -->
+                <ellipse class="agent-halo" cx="110" cy="72" rx="46" ry="14" stroke="#E8C07A" stroke-opacity="0.35"/>
+                <!-- head -->
+                <circle cx="110" cy="68" r="28" stroke="url(#bodyGrad)" stroke-width="1.5" fill="rgba(12,18,28,0.55)"/>
+                <circle class="agent-eye" cx="100" cy="68" r="2.2" fill="#FFE2A8" filter="url(#softGlow)"/>
+                <circle class="agent-eye" cx="120" cy="68" r="2.2" fill="#FFE2A8" filter="url(#softGlow)"/>
+                <!-- torso -->
+                <path d="M70 118 C78 96, 142 96, 150 118 L158 210 C160 232, 148 248, 132 252 L88 252 C72 248, 60 232, 62 210 Z" fill="rgba(14,20,30,0.72)" stroke="url(#bodyGrad)" stroke-width="1.4"/>
+                <!-- core -->
+                <circle class="agent-core" cx="110" cy="168" r="14" fill="url(#coreGrad)" filter="url(#softGlow)" opacity="0.9"/>
+                <circle cx="110" cy="168" r="22" stroke="#E8C07A" stroke-opacity="0.25" stroke-dasharray="3 5"/>
+                <!-- arms -->
+                <path d="M70 128 C48 148, 42 188, 52 220" stroke="url(#bodyGrad)" stroke-width="1.4" stroke-linecap="round"/>
+                <path d="M150 128 C172 148, 178 188, 168 220" stroke="url(#bodyGrad)" stroke-width="1.4" stroke-linecap="round"/>
+                <!-- legs into pedestal -->
+                <path d="M92 252 L86 300" stroke="url(#bodyGrad)" stroke-width="1.3" stroke-linecap="round"/>
+                <path d="M128 252 L134 300" stroke="url(#bodyGrad)" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <div class="agent-pedestal">
+                <span class="pedestal-ring"></span>
+                <span class="pedestal-ring delay"></span>
+              </div>
+            </div>
+
+            <aside class="holo-panel">
+              <p class="holo-kicker">personalised agent</p>
+              <p class="holo-status"><span class="pulse"></span> standby · ready</p>
+              <ul class="holo-feed" aria-hidden="true">
+                <li><span class="prompt">›</span> sync book context<span class="cursor"></span></li>
+                <li class="dim">› lesson log queued</li>
+                <li class="dim">› assignment watch armed</li>
+                <li class="dim">› bill draft warm</li>
+                <li class="ok">› privacy lock on</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="brand-hero">Tutor Atlas</p>
+        <h1 id="hero-heading">
+          Get your evenings back<br>
+          from tuition admin.
+        </h1>
+        <div class="hero-lead">
+          <p>Leave the machine work to a machine.</p>
+          <p>Keep the human touch for tutoring.</p>
+          <p>Your PA holds the book — lesson logs, schedule and payments, paste-ready bills for WhatsApp.</p>
+          <p>Built to catch fits the instant they post, format to each agency, and keep one trusted record — you still confirm every apply.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#waitlist">Join the waitlist</a>
+        </div>
+        <p class="hero-note">One agent. Daily book first. Channels when you are ready.</p>
+      </div>
+    </section>
+
+    <section class="section problem" id="problem" aria-labelledby="problem-heading">
+      <div class="section-inner reveal">
+        <p class="eyebrow">The quiet cost</p>
+        <h2 id="problem-heading">Home tuition pays well. The admin after each lesson is the problem.</h2>
+        <div class="section-lead problem-lead">
+          <p>You already know how to teach.</p>
+          <p>What wears you down is the quiet stuff after class — logs, fees, month-end bills — when you would rather stay with your students.</p>
+        </div>
+      </div>
+
+      <div class="tagline-reveal problem-bridge" id="tagline" aria-label="Product promise">
+        <p class="tagline-text" data-tagline>
+          <span>Leave</span>
+          <span>the</span>
+          <span>machine</span>
+          <span>work</span>
+          <span>to</span>
+          <span>a</span>
+          <span>machine.</span>
+        </p>
+        <p class="tagline-sub">Keep the human touch for tutoring.</p>
+      </div>
+
+      <div class="section-inner reveal">
+        <ul class="problem-grid">
+          <li>
+            <h3>The log that never gets written</h3>
+            <p>After a late class, the lesson, duration, and fee never get written down. By month-end you are hunting chats and notes.</p>
+          </li>
+          <li>
+            <h3>Month-end scramble</h3>
+            <p>Parents ask what they owe. You rebuild it from WhatsApp threads and half-remembered lessons. Totals get disputed.</p>
+          </li>
+          <li>
+            <h3>“I can do this in Google Sheets”</h3>
+            <p>Until you cannot. Missed rows. Broken formulas. Another evening recalculating — a second job after teaching.</p>
+          </li>
+        </ul>
+
+        <div class="problem-channels" aria-labelledby="channels-heading">
+          <h3 id="channels-heading">Looking for the next student? Every channel keeps its own record.</h3>
+          <div class="problem-channels-lead">
+            <p>Fits go in minutes — while you teach, commute, or go offline. Missed eyeballs are missed income.</p>
+            <p>Agency Telegram channels keep separate records. No common view of what you tried. Each agency wants details in its own shape — so you retype the same form again and again.</p>
+          </div>
+
+          <figure class="channel-fragment" aria-hidden="true">
+            <div class="scene-feature-chrome compact">
+              <span class="vm-dots"><i></i><i></i><i></i></span>
+              <span class="scene-feature-title">atlas://channels · fragmented</span>
+              <span class="vm-live warn"><i></i> no common record</span>
+            </div>
+            <div class="channel-fragment-body">
+              <ul class="channel-shards">
+                <li>
+                  <span class="ch-label">ch · agency A</span>
+                  <strong>own record</strong>
+                  <span class="ch-meta">applied? · ?</span>
+                </li>
+                <li>
+                  <span class="ch-label">ch · agency B</span>
+                  <strong>own record</strong>
+                  <span class="ch-meta">status · lost</span>
+                </li>
+                <li>
+                  <span class="ch-label">ch · tg channels</span>
+                  <strong>own record</strong>
+                  <span class="ch-meta">progress · ?</span>
+                </li>
+              </ul>
+              <span class="channel-arrow" aria-hidden="true">→</span>
+              <div class="channel-pa">
+                <p class="channel-pa-kicker">your agent · PA</p>
+                <p class="channel-pa-title">one trusted source of truth</p>
+                <ul>
+                  <li>book · lessons · balances</li>
+                  <li>watch · format · confirm (built to)</li>
+                  <li>tried · tracked · one record</li>
+                </ul>
+              </div>
+            </div>
+            <p class="channel-fragment-caption">Fragmented channel records → same personalised agent as your book PA</p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section agent" id="agent" aria-labelledby="agent-heading">
+      <div class="section-inner reveal">
+        <p class="eyebrow">What you get</p>
+        <h2 id="agent-heading">Your PA for the book — so you can stay human with students.</h2>
+        <div class="section-lead">
+          <p>A personalised AI agent as your book of record — students, lessons, schedule, what is owed, and paste-ready bill text for WhatsApp.</p>
+          <p>Same agent is built for instant watch across agency Telegram channels, format-to-agency applies you still confirm, and one trusted record of what you tried. Not two products. One agent. Daily book first.</p>
+        </div>
+
+        <figure class="scene-feature" aria-hidden="true">
+          <div class="scene-feature-chrome">
+            <span class="vm-dots"><i></i><i></i><i></i></span>
+            <span class="scene-feature-title">atlas://agent · book-context</span>
+            <span class="vm-live"><i></i> holding</span>
+          </div>
+          <!-- Mobile: stacked glass cards (wide SVG text becomes illegible &lt;600px) -->
+          <div class="scene-feature-stack">
+            <div class="scene-stack-agent">
+              <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="scene-stack-agent-svg">
+                <ellipse cx="60" cy="28" rx="22" ry="7" stroke="#E8C07A" stroke-opacity="0.3"/>
+                <circle cx="60" cy="26" r="14" stroke="#E8C07A" stroke-opacity="0.7" fill="rgba(12,18,28,0.65)"/>
+                <circle cx="55" cy="26" r="1.4" fill="#FFE2A8"/>
+                <circle cx="65" cy="26" r="1.4" fill="#FFE2A8"/>
+                <path d="M40 52 C44 40, 76 40, 80 52 L84 100 C85 112, 78 120, 70 122 L50 122 C42 120, 35 112, 36 100 Z" fill="rgba(14,20,30,0.75)" stroke="#E8C07A" stroke-opacity="0.55"/>
+                <circle cx="60" cy="78" r="6" fill="#C4893A"/>
+              </svg>
+              <p class="scene-stack-status"><span class="pulse"></span> holding book context</p>
+            </div>
+            <ul class="scene-stack-cards">
+              <li><span class="k">Student · subject</span><strong>Alya · Sec 3 Maths</strong></li>
+              <li><span class="k">Schedule</span><strong>Tue 7:30 · 1.5h · $70</strong></li>
+              <li><span class="k">Ledger row</span><strong>logged · awaiting bill</strong></li>
+              <li class="ok"><span class="k">Payment</span><strong>Balanced · privacy on</strong></li>
+            </ul>
+          </div>
+          <svg class="scene-svg scene-svg--feature" viewBox="0 0 640 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="afBody" x1="120" y1="30" x2="120" y2="200" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E8C07A" stop-opacity="0.95"/>
+                <stop offset="0.5" stop-color="#C4893A" stop-opacity="0.5"/>
+                <stop offset="1" stop-color="#1A2433" stop-opacity="0.2"/>
+              </linearGradient>
+              <linearGradient id="afCore" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#FFE2A8"/><stop offset="1" stop-color="#C4893A"/>
+              </linearGradient>
+              <filter id="afGlow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <rect x="16" y="16" width="608" height="188" rx="14" fill="rgba(7,11,16,0.45)" stroke="rgba(232,192,122,0.14)"/>
+            <!-- mini agent -->
+            <g transform="translate(48,28)">
+              <g class="scene-agent-breathe">
+                <ellipse cx="72" cy="36" rx="28" ry="8" stroke="#E8C07A" stroke-opacity="0.3"/>
+                <circle cx="72" cy="34" r="18" stroke="url(#afBody)" stroke-width="1.3" fill="rgba(12,18,28,0.65)"/>
+                <circle class="scene-eye" cx="66" cy="34" r="1.6" fill="#FFE2A8" filter="url(#afGlow)"/>
+                <circle class="scene-eye" cx="78" cy="34" r="1.6" fill="#FFE2A8" filter="url(#afGlow)"/>
+                <path d="M48 68 C52 54, 92 54, 96 68 L100 128 C101 142, 94 152, 84 154 L60 154 C50 152, 43 142, 44 128 Z" fill="rgba(14,20,30,0.75)" stroke="url(#afBody)" stroke-width="1.2"/>
+                <circle class="scene-core" cx="72" cy="100" r="8" fill="url(#afCore)" filter="url(#afGlow)" opacity="0.9"/>
+                <path d="M48 74 C36 86, 32 108, 38 126" stroke="url(#afBody)" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M96 74 C108 86, 112 108, 106 126" stroke="url(#afBody)" stroke-width="1.2" stroke-linecap="round"/>
+              </g>
+            </g>
+            <!-- floating context cards -->
+            <g class="scene-float-a">
+              <rect x="220" y="36" width="168" height="52" rx="10" fill="rgba(14,20,30,0.82)" stroke="rgba(232,192,122,0.22)"/>
+              <text x="236" y="56" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="0.08em">STUDENT · SUBJECT</text>
+              <text x="236" y="74" fill="#F3F1EB" font-family="Manrope, sans-serif" font-size="13" font-weight="600">Alya · Sec 3 Maths</text>
+            </g>
+            <g class="scene-float-b">
+              <rect x="408" y="36" width="196" height="52" rx="10" fill="rgba(14,20,30,0.82)" stroke="rgba(232,192,122,0.22)"/>
+              <text x="424" y="56" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="0.08em">SCHEDULE</text>
+              <text x="424" y="74" fill="#F3F1EB" font-family="Manrope, sans-serif" font-size="13" font-weight="600">Tue 7:30 · 1.5h · $70</text>
+            </g>
+            <g class="scene-float-c">
+              <rect x="220" y="108" width="168" height="72" rx="10" fill="rgba(14,20,30,0.82)" stroke="rgba(232,192,122,0.18)"/>
+              <text x="236" y="128" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="0.08em">LEDGER ROW</text>
+              <rect x="236" y="140" width="136" height="8" rx="2" fill="rgba(232,192,122,0.18)"/>
+              <rect class="scene-write" x="236" y="140" width="88" height="8" rx="2" fill="#E8C07A" opacity="0.55"/>
+              <text x="236" y="166" fill="#9AA3AD" font-family="JetBrains Mono, monospace" font-size="10">logged · awaiting bill</text>
+            </g>
+            <g class="scene-float-d">
+              <rect x="408" y="108" width="196" height="72" rx="10" fill="rgba(14,20,30,0.82)" stroke="rgba(109,207,138,0.28)"/>
+              <text x="424" y="128" fill="#8FD4A4" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="0.08em">PAYMENT STATE</text>
+              <text x="424" y="150" fill="#F3F1EB" font-family="Manrope, sans-serif" font-size="13" font-weight="600">Balanced · Apr clear</text>
+              <text x="424" y="168" fill="#6F7883" font-family="JetBrains Mono, monospace" font-size="10">privacy lock on</text>
+            </g>
+          </svg>
+        </figure>
+
+        <ul class="benefit-list">
+          <li>
+            <span class="benefit-motif" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="14" r="6" stroke="#E8C07A" stroke-opacity="0.7"/><circle cx="18" cy="14" r="1" fill="#FFE2A8"/><circle cx="22" cy="14" r="1" fill="#FFE2A8"/><path d="M12 24c2-4 14-4 16 0v8H12z" stroke="#E8C07A" stroke-opacity="0.55" fill="rgba(14,20,30,0.5)"/><circle cx="20" cy="28" r="2.5" fill="#C4893A" opacity="0.85"/></svg>
+            </span>
+            <h3>Never rebuild the student story</h3>
+            <p>Student, subject, schedule, and payment state stay with your agent — so you open a chat knowing the book, not starting from blank.</p>
+          </li>
+          <li>
+            <span class="benefit-motif" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="8" width="28" height="24" rx="4" stroke="#E8C07A" stroke-opacity="0.55"/><path d="M10 16h20M10 22h14M10 28h10" stroke="#E8C07A" stroke-opacity="0.7" stroke-width="1.4" stroke-linecap="round"/><circle cx="30" cy="28" r="3" fill="#E8C07A" opacity="0.8"/></svg>
+            </span>
+            <h3>Lessons logged before the next commute</h3>
+            <p>After class, capture duration and fee while they are still fresh. Admin does not wait for a free evening you never get.</p>
+          </li>
+          <li>
+            <span class="benefit-motif" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none"><path d="M8 12h18a4 4 0 014 4v8a4 4 0 01-4 4H14l-6 4v-4H8a0 0 0 010 0V12z" stroke="#E8C07A" stroke-opacity="0.6" fill="rgba(14,20,30,0.45)"/><path d="M13 18h12M13 23h8" stroke="#E8C07A" stroke-opacity="0.75" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Month-end bills ready to paste</h3>
+            <p>When it is time, copy paste-ready bill text into WhatsApp the way you already work. Parents do not need an account — you send it; the agent does not message parents for you.</p>
+          </li>
+          <li>
+            <span class="benefit-motif" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="12" stroke="#E8C07A" stroke-opacity="0.35" stroke-dasharray="3 4"/><circle cx="20" cy="20" r="4" fill="#C4893A" opacity="0.9"/><circle cx="20" cy="20" r="7" stroke="#E8C07A" stroke-opacity="0.5"/></svg>
+            </span>
+            <h3>Schedule and balances without the sheet</h3>
+            <p>See what is due, what is paid, and what still needs a bill — without rebuilding Google Sheets every month-end.</p>
+          </li>
+          <li>
+            <span class="benefit-motif" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="11" stroke="#E8C07A" stroke-opacity="0.4"/><path d="M20 11v9l6 3" stroke="#E8C07A" stroke-width="1.5" stroke-linecap="round"/><circle cx="20" cy="20" r="2" fill="#FFE2A8"/></svg>
+            </span>
+            <h3>Built to catch fits across channels too</h3>
+            <p>When you want more students, the same agent is built to listen the instant assignments post, format your details to each agency’s requirements, help you apply with your confirm, and track what you already tried — after the daily book habit is in place.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section assignments" id="assignments" aria-labelledby="assignments-heading">
+      <div class="section-inner reveal">
+        <p class="eyebrow">Assignment handling</p>
+        <h2 id="assignments-heading">Fill open slots — with one trusted record across the mess.</h2>
+        <div class="section-lead">
+          <p>After your book is in place, the same agent helps with the half that earns.</p>
+          <p>Fits disappear in minutes you are not looking — missed eyeballs are missed income. Channels keep separate records; each agency wants details in a different shape.</p>
+          <p>Built for instant watch, format-to-agency, an apply you still confirm, and one trusted record across the mess. Not a marketplace. Not before the daily book.</p>
+        </div>
+
+        <ol class="assign-flow" aria-label="Assignment handling flow">
+          <li>
+            <div class="assign-scene" aria-hidden="true">
+              <svg class="scene-svg" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="184" height="90" rx="10" fill="rgba(7,11,16,0.55)" stroke="rgba(232,192,122,0.16)"/>
+                <circle class="scene-radar" cx="62" cy="55" r="28" stroke="#E8C07A" stroke-opacity="0.2"/>
+                <circle class="scene-radar delay" cx="62" cy="55" r="18" stroke="#E8C07A" stroke-opacity="0.35"/>
+                <circle cx="62" cy="55" r="5" fill="#C4893A" opacity="0.9"/>
+                <circle cx="62" cy="40" r="2" fill="#FFE2A8" opacity="0.7"/>
+                <circle cx="78" cy="62" r="2" fill="#FFE2A8" opacity="0.5"/>
+                <circle cx="48" cy="68" r="1.5" fill="#FFE2A8" opacity="0.45"/>
+                <g transform="translate(108,28)">
+                  <rect width="68" height="14" rx="3" fill="rgba(232,192,122,0.1)" stroke="rgba(232,192,122,0.2)"/>
+                  <text x="8" y="10" fill="#9AA3AD" font-family="JetBrains Mono, monospace" font-size="7">ch · agency</text>
+                  <rect y="22" width="68" height="14" rx="3" fill="rgba(232,192,122,0.08)" stroke="rgba(232,192,122,0.15)"/>
+                  <text x="8" y="32" fill="#6F7883" font-family="JetBrains Mono, monospace" font-size="7">ch · tg channels</text>
+                  <rect y="44" width="68" height="14" rx="3" fill="rgba(232,192,122,0.12)" stroke="rgba(232,192,122,0.28)"/>
+                  <text x="8" y="54" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="7">scanning…</text>
+                </g>
+              </svg>
+            </div>
+            <span class="assign-step">01</span>
+            <h3>Watch</h3>
+            <p>Listen across public tuition channels the instant assignments post — so you do not miss a fit in the minutes you are teaching or offline.</p>
+          </li>
+          <li>
+            <div class="assign-scene" aria-hidden="true">
+              <svg class="scene-svg" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="184" height="90" rx="10" fill="rgba(7,11,16,0.55)" stroke="rgba(232,192,122,0.16)"/>
+                <g transform="translate(24,28)">
+                  <rect width="70" height="54" rx="8" fill="rgba(14,20,30,0.8)" stroke="rgba(232,192,122,0.2)"/>
+                  <text x="10" y="18" fill="#6F7883" font-family="JetBrains Mono, monospace" font-size="7">Sec 2 · Chem</text>
+                  <text x="10" y="34" fill="#9AA3AD" font-family="Manrope, sans-serif" font-size="9">Tampines</text>
+                  <text x="10" y="48" fill="#6F7883" font-family="JetBrains Mono, monospace" font-size="7">$45/h</text>
+                </g>
+                <path d="M102 55h12" stroke="#E8C07A" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="2 3"/>
+                <g class="scene-match-glow" transform="translate(122,24)">
+                  <rect width="54" height="62" rx="8" fill="rgba(14,20,30,0.9)" stroke="#E8C07A" stroke-opacity="0.55"/>
+                  <text x="10" y="18" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="7">FIT</text>
+                  <text x="10" y="36" fill="#F3F1EB" font-family="Manrope, sans-serif" font-size="16" font-weight="600">86</text>
+                  <text x="10" y="52" fill="#8FD4A4" font-family="JetBrains Mono, monospace" font-size="7">likely</text>
+                </g>
+              </svg>
+            </div>
+            <span class="assign-step">02</span>
+            <h3>Match</h3>
+            <p>Surface likely fits against subjects, levels, areas, and rate floor — bias toward showing a fit over hiding one.</p>
+          </li>
+          <li>
+            <div class="assign-scene" aria-hidden="true">
+              <svg class="scene-svg" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="184" height="90" rx="10" fill="rgba(7,11,16,0.55)" stroke="rgba(232,192,122,0.16)"/>
+                <rect x="22" y="24" width="156" height="48" rx="8" fill="rgba(14,20,30,0.85)" stroke="rgba(232,192,122,0.2)"/>
+                <text x="34" y="42" fill="#9AA3AD" font-family="JetBrains Mono, monospace" font-size="8">outbound draft</text>
+                <text x="34" y="58" fill="#F3F1EB" font-family="Manrope, sans-serif" font-size="11">Hi, I can take Sec 2 Chem…</text>
+                <rect class="scene-confirm-btn" x="52" y="80" width="96" height="14" rx="7" fill="#E8C07A" opacity="0.85"/>
+                <text x="72" y="90" fill="#1A1208" font-family="Manrope, sans-serif" font-size="8" font-weight="600">confirm to send</text>
+              </svg>
+            </div>
+            <span class="assign-step">03</span>
+            <h3>Confirm</h3>
+            <p>Built to format your details to each agency’s and assignment’s requirements, show you the outbound, and send only when you say yes. Never apply without your confirmation.</p>
+          </li>
+          <li>
+            <div class="assign-scene" aria-hidden="true">
+              <svg class="scene-svg" viewBox="0 0 200 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="8" y="10" width="184" height="90" rx="10" fill="rgba(7,11,16,0.55)" stroke="rgba(232,192,122,0.16)"/>
+                <g transform="translate(28,26)">
+                  <rect width="144" height="16" rx="4" fill="rgba(14,20,30,0.75)" stroke="rgba(232,192,122,0.15)"/>
+                  <circle cx="12" cy="8" r="4" fill="none" stroke="#8FD4A4"/><path d="M10 8l1.5 1.5 3-3" stroke="#8FD4A4" stroke-width="1.2"/>
+                  <text x="24" y="11" fill="#9AA3AD" font-family="JetBrains Mono, monospace" font-size="8">Tried · #4821</text>
+                  <rect y="24" width="144" height="16" rx="4" fill="rgba(14,20,30,0.75)" stroke="rgba(232,192,122,0.15)"/>
+                  <circle cx="12" cy="32" r="4" fill="none" stroke="#8FD4A4"/><path d="M10 32l1.5 1.5 3-3" stroke="#8FD4A4" stroke-width="1.2"/>
+                  <text x="24" y="35" fill="#9AA3AD" font-family="JetBrains Mono, monospace" font-size="8">Tried · #4790</text>
+                  <rect y="48" width="144" height="16" rx="4" fill="rgba(14,20,30,0.75)" stroke="rgba(232,192,122,0.28)"/>
+                  <circle cx="12" cy="56" r="4" fill="none" stroke="#E8C07A" stroke-dasharray="2 2"/>
+                  <text x="24" y="59" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="8">Watching · #4902</text>
+                </g>
+              </svg>
+            </div>
+            <span class="assign-step">04</span>
+            <h3>Track</h3>
+            <p>Remember what you already tried so the same posting does not waste another evening.</p>
+          </li>
+        </ol>
+
+        <p class="assign-note">
+          Honest sequencing: lesson admin comes first — students, lessons, schedule, payments, and paste-ready bill text on the same personalised agent. Assignment watching and apply attach later on that agent. Where a channel cannot be fully automated, the agent hands off cleanly rather than pretending one-tap everywhere.
+        </p>
+      </div>
+    </section>
+
+    <section class="section how" id="how" aria-labelledby="how-heading">
+      <div class="section-inner reveal">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-heading">Three moves. Then you are back to teaching.</h2>
+        <p class="section-lead">
+          The daily driver in three moves: log the lesson, see what is owed, paste clean bill text into WhatsApp — then get back to teaching with more energy left. Assignment handling is built on the same PA once that habit lands.
+        </p>
+        <ol class="steps">
+          <li>
+            <div class="step-scene" aria-hidden="true">
+              <svg class="scene-svg" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="logBody" x1="48" y1="20" x2="48" y2="120" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E8C07A" stop-opacity="0.9"/><stop offset="1" stop-color="#1A2433" stop-opacity="0.2"/>
+                  </linearGradient>
+                  <linearGradient id="logCore" x1="0" y1="0" x2="1" y2="1">
+                    <stop stop-color="#FFE2A8"/><stop offset="1" stop-color="#C4893A"/>
+                  </linearGradient>
+                </defs>
+                <rect x="6" y="8" width="248" height="134" rx="12" fill="rgba(7,11,16,0.5)" stroke="rgba(232,192,122,0.14)"/>
+                <!-- agent capturing -->
+                <g transform="translate(18,30)">
+                  <g class="scene-agent-breathe">
+                    <circle cx="36" cy="22" r="12" stroke="url(#logBody)" fill="rgba(12,18,28,0.7)"/>
+                    <circle class="scene-eye" cx="32" cy="22" r="1.2" fill="#FFE2A8"/>
+                    <circle class="scene-eye" cx="40" cy="22" r="1.2" fill="#FFE2A8"/>
+                    <path d="M22 42c2-8 26-8 28 0v36H22z" stroke="url(#logBody)" fill="rgba(14,20,30,0.7)"/>
+                    <circle class="scene-core" cx="36" cy="58" r="5" fill="url(#logCore)"/>
+                    <path d="M50 48c10 4 18 10 22 22" stroke="#E8C07A" stroke-opacity="0.55" stroke-linecap="round"/>
+                  </g>
+                </g>
+                <!-- ledger -->
+                <g transform="translate(100,28)">
+                  <rect width="140" height="94" rx="8" fill="rgba(14,20,30,0.85)" stroke="rgba(232,192,122,0.22)"/>
+                  <text x="12" y="18" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="8" letter-spacing="0.06em">LESSON LOG</text>
+                  <rect x="12" y="30" width="116" height="18" rx="4" fill="rgba(232,192,122,0.08)" stroke="rgba(232,192,122,0.12)"/>
+                  <text x="18" y="42" fill="#6F7883" font-family="JetBrains Mono, monospace" font-size="8">Alya · Maths · 1.5h</text>
+                  <rect x="12" y="56" width="116" height="22" rx="4" fill="rgba(232,192,122,0.12)" stroke="rgba(232,192,122,0.4)"/>
+                  <text x="18" y="70" fill="#F3F1EB" font-family="JetBrains Mono, monospace" font-size="8">Kai · Sci · 2h · $80</text>
+                  <rect class="scene-write" x="18" y="74" width="40" height="2" rx="1" fill="#FFE2A8"/>
+                  <text x="12" y="96" fill="#8FD4A4" font-family="JetBrains Mono, monospace" font-size="8">› row captured</text>
+                </g>
+              </svg>
+            </div>
+            <span class="step-num">01</span>
+            <h3>Wake the agent after class</h3>
+            <p>Capture student, subject, duration, and fee before the next commute starts.</p>
+          </li>
+          <li>
+            <div class="step-scene" aria-hidden="true">
+              <svg class="scene-svg" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="248" height="134" rx="12" fill="rgba(7,11,16,0.5)" stroke="rgba(232,192,122,0.14)"/>
+                <!-- calendar -->
+                <g transform="translate(20,24)">
+                  <rect width="110" height="102" rx="8" fill="rgba(14,20,30,0.85)" stroke="rgba(232,192,122,0.2)"/>
+                  <text x="12" y="18" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="8">APR</text>
+                  <g fill="rgba(232,192,122,0.12)">
+                    <rect x="12" y="28" width="18" height="14" rx="2"/><rect x="34" y="28" width="18" height="14" rx="2"/>
+                    <rect x="56" y="28" width="18" height="14" rx="2"/><rect x="78" y="28" width="18" height="14" rx="2"/>
+                    <rect x="12" y="48" width="18" height="14" rx="2"/><rect x="34" y="48" width="18" height="14" rx="2"/>
+                    <rect x="56" y="48" width="18" height="14" rx="2"/><rect x="78" y="48" width="18" height="14" rx="2"/>
+                  </g>
+                  <rect class="scene-cal-active" x="56" y="48" width="18" height="14" rx="2" fill="#C4893A" opacity="0.85"/>
+                  <rect x="12" y="72" width="86" height="20" rx="4" fill="rgba(232,192,122,0.08)"/>
+                  <text x="18" y="85" fill="#9AA3AD" font-family="JetBrains Mono, monospace" font-size="8">3 due · 1 paid</text>
+                </g>
+                <!-- PayNow-ish calm panel -->
+                <g transform="translate(144,32)">
+                  <rect width="96" height="86" rx="8" fill="rgba(14,20,30,0.9)" stroke="rgba(232,192,122,0.28)"/>
+                  <text x="12" y="18" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="7">BALANCE</text>
+                  <text x="12" y="40" fill="#F3F1EB" font-family="Manrope, sans-serif" font-size="18" font-weight="600">$210</text>
+                  <rect x="12" y="52" width="40" height="40" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(232,192,122,0.25)"/>
+                  <rect x="18" y="58" width="10" height="10" fill="rgba(232,192,122,0.35)"/>
+                  <rect x="36" y="58" width="10" height="10" fill="rgba(232,192,122,0.2)"/>
+                  <rect x="18" y="76" width="10" height="10" fill="rgba(232,192,122,0.2)"/>
+                  <rect x="36" y="76" width="10" height="10" fill="rgba(232,192,122,0.45)"/>
+                  <text x="58" y="72" fill="#6F7883" font-family="JetBrains Mono, monospace" font-size="7">Pay</text>
+                  <text x="58" y="84" fill="#6F7883" font-family="JetBrains Mono, monospace" font-size="7">Now</text>
+                </g>
+              </svg>
+            </div>
+            <span class="step-num">02</span>
+            <h3>Let it hold schedule and balances</h3>
+            <p>See what is due, what is paid, and what still needs a bill, without rebuilding a sheet each month.</p>
+          </li>
+          <li>
+            <div class="step-scene" aria-hidden="true">
+              <svg class="scene-svg" viewBox="0 0 260 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="billBody" x1="40" y1="20" x2="40" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#E8C07A" stop-opacity="0.85"/><stop offset="1" stop-color="#1A2433" stop-opacity="0.15"/>
+                  </linearGradient>
+                </defs>
+                <rect x="6" y="8" width="248" height="134" rx="12" fill="rgba(7,11,16,0.5)" stroke="rgba(232,192,122,0.14)"/>
+                <!-- agent composing -->
+                <g transform="translate(16,36)">
+                  <g class="scene-agent-breathe">
+                    <circle cx="28" cy="18" r="11" stroke="url(#billBody)" fill="rgba(12,18,28,0.7)"/>
+                    <circle class="scene-eye" cx="24" cy="18" r="1.1" fill="#FFE2A8"/>
+                    <circle class="scene-eye" cx="32" cy="18" r="1.1" fill="#FFE2A8"/>
+                    <path d="M16 36c2-7 22-7 24 0v30H16z" stroke="url(#billBody)" fill="rgba(14,20,30,0.7)"/>
+                    <circle class="scene-core" cx="28" cy="50" r="4.5" fill="#C4893A"/>
+                  </g>
+                </g>
+                <!-- WhatsApp-ish bill paste -->
+                <g transform="translate(78,22)">
+                  <path d="M8 8h148a10 10 0 0110 10v70a10 10 0 01-10 10H48l-16 12v-12H8A10 10 0 018 88V18A10 10 0 0118 8z" fill="rgba(14,20,30,0.9)" stroke="rgba(232,192,122,0.28)"/>
+                  <text x="20" y="32" fill="#E8C07A" font-family="JetBrains Mono, monospace" font-size="8">WHATSAPP READY</text>
+                  <text x="20" y="50" fill="#F3F1EB" font-family="Manrope, sans-serif" font-size="11">Bill for April — Alya</text>
+                  <text x="20" y="68" fill="#9AA3AD" font-family="JetBrains Mono, monospace" font-size="9">4 lessons · $280</text>
+                  <rect class="scene-copy-chip" x="20" y="80" width="72" height="16" rx="8" fill="rgba(232,192,122,0.2)" stroke="rgba(232,192,122,0.45)"/>
+                  <text x="34" y="91" fill="#E8C07A" font-family="Manrope, sans-serif" font-size="8" font-weight="600">copy · paste</text>
+                </g>
+              </svg>
+            </div>
+            <span class="step-num">03</span>
+            <h3>Paste a WhatsApp ready bill</h3>
+            <p>When it is time, copy a clean bill into WhatsApp. The agent keeps the draft warm until you send it.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section trust" id="trust" aria-labelledby="trust-heading">
+      <div class="section-inner reveal">
+        <div class="trust-layout">
+          <div class="trust-copy">
+            <p class="eyebrow">Trust</p>
+            <h2 id="trust-heading">Your book stays private. Your relationships stay yours.</h2>
+            <p class="section-lead">
+              You should not have to list students on a marketplace to get organised. Tutor Atlas is the quiet agent behind your teaching — fuss-free trust, built tutor-facing from day one.
+            </p>
+          </div>
+          <figure class="trust-vault" aria-hidden="true">
+            <div class="scene-feature-chrome compact">
+              <span class="vm-dots"><i></i><i></i><i></i></span>
+              <span class="scene-feature-title">atlas://vault · sealed</span>
+              <span class="vm-live"><i></i> private</span>
+            </div>
+            <svg class="scene-svg scene-svg--vault" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="vaultBody" x1="160" y1="30" x2="160" y2="180" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#E8C07A" stop-opacity="0.9"/><stop offset="1" stop-color="#1A2433" stop-opacity="0.2"/>
+                </linearGradient>
+                <linearGradient id="vaultCore" x1="0" y1="0" x2="1" y2="1">
+                  <stop stop-color="#FFE2A8"/><stop offset="1" stop-color="#C4893A"/>
+                </linearGradient>
+                <filter id="vaultGlow" x="-40%" y="-40%" width="180%" height="180%">
+                  <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <rect x="12" y="12" width="296" height="196" rx="14" fill="rgba(7,11,16,0.5)" stroke="rgba(232,192,122,0.14)"/>
+              <!-- vault ring -->
+              <circle class="scene-vault-ring" cx="160" cy="108" r="72" stroke="#E8C07A" stroke-opacity="0.18" stroke-dasharray="4 8"/>
+              <circle cx="160" cy="108" r="56" stroke="#E8C07A" stroke-opacity="0.28"/>
+              <!-- agent in vault -->
+              <g transform="translate(116,48)">
+                <g class="scene-agent-breathe">
+                  <circle cx="44" cy="28" r="16" stroke="url(#vaultBody)" fill="rgba(12,18,28,0.75)"/>
+                  <circle class="scene-eye" cx="39" cy="28" r="1.4" fill="#FFE2A8" filter="url(#vaultGlow)"/>
+                  <circle class="scene-eye" cx="49" cy="28" r="1.4" fill="#FFE2A8" filter="url(#vaultGlow)"/>
+                  <path d="M24 52c3-10 38-10 40 0v48H24z" stroke="url(#vaultBody)" fill="rgba(14,20,30,0.8)"/>
+                  <circle class="scene-core" cx="44" cy="74" r="7" fill="url(#vaultCore)" filter="url(#vaultGlow)"/>
+                </g>
+              </g>
+              <!-- lock badge -->
+              <g transform="translate(136,148)">
+                <rect width="48" height="36" rx="8" fill="rgba(14,20,30,0.95)" stroke="#E8C07A" stroke-opacity="0.55"/>
+                <path d="M16 16v-6a8 8 0 0116 0v6" stroke="#E8C07A" stroke-width="1.6" fill="none"/>
+                <rect x="14" y="16" width="20" height="14" rx="3" fill="#C4893A" opacity="0.85"/>
+                <circle cx="24" cy="23" r="2" fill="#1A1208"/>
+              </g>
+              <text x="160" y="200" text-anchor="middle" fill="#8FD4A4" font-family="JetBrains Mono, monospace" font-size="9">your book · not a marketplace</text>
+            </svg>
+          </figure>
+        </div>
+        <ul class="trust-list">
+          <li>
+            <h3>Your students stay yours</h3>
+            <p>Keep the book you built. Tutor Atlas is for tutors who already have students — not a parent marketplace that redistributes relationships.</p>
+          </li>
+          <li>
+            <h3>Data that serves you, not ads</h3>
+            <p>Your lesson and payment context should help you teach and get paid. We are not here to advertise your book or turn tuition into surveillance.</p>
+          </li>
+          <li>
+            <h3>One clear next step</h3>
+            <p>This page has one job: join the waitlist if you want evenings back from admin — a clear book for lessons, schedule, payments, and paste-ready bills, with assignment memory built to follow on the same agent.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section waitlist" id="waitlist" aria-labelledby="waitlist-heading">
+      <div class="section-inner reveal">
+        <p class="eyebrow">Early access</p>
+        <h2 id="waitlist-heading">Want evenings back — and energy left for students?</h2>
+        <p class="section-lead">
+          The waitlist opens shortly. We are not collecting names or contact details on this page until we can store them properly. The product is unchanged: a personalised PA for your book — lesson logs, schedule and payments, paste-ready bills for WhatsApp — with assignment-channel memory built to follow on the same agent. No public pricing on this page.
+        </p>
+
+        <div class="form-shell is-hold" data-form-shell>
+          <p class="form-hold" role="status">The waitlist opens shortly. Please do not send details here — we cannot keep them yet.</p>
+          <form class="waitlist-form is-disabled" id="waitlist-form" data-waitlist-form aria-disabled="true">
+            <fieldset disabled>
+              <legend class="visually-hidden">Waitlist (closed)</legend>
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="off" maxlength="80" placeholder="Not collecting yet" disabled>
+              </div>
+              <div class="field">
+                <label for="contact">Telegram handle</label>
+                <input id="contact" name="telegram" type="text" autocomplete="off" maxlength="32" placeholder="Not collecting yet" disabled>
+              </div>
+            </fieldset>
+            <p class="form-note">
+              When the list opens we will ask for your name and Telegram handle, with consent and a live privacy notice — not a WhatsApp number on an unbacked form.
+            </p>
+            <button class="btn btn-primary btn-block" type="button" data-submit disabled>
+              <span data-submit-label>Waitlist opens shortly</span>
+            </button>
+            <p class="form-status" data-form-status role="status" aria-live="polite">The waitlist opens shortly.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-heading">
+      <div class="section-inner reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-heading">Straight answers before you join</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is Tutor Atlas another tutoring marketplace?</summary>
+            <p>No. Tutor Atlas is a personalised AI agent for tutors who already have students. It is not a parent marketplace and it does not redistribute your book.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does the AI agent actually do?</summary>
+            <p>You get a personalised PA for your book of record: lessons logged while they are still fresh, schedule and payment context held for you, and paste-ready bill text for WhatsApp when month-end arrives — so you keep time for teaching instead of rebuilding a spreadsheet. The same agent is built to become your trusted record across public agency Telegram channels — watching for fits, helping you apply with your confirmation, and tracking what you have already tried. Daily lesson admin comes first.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does the AI agent handle tuition assignments?</summary>
+            <p>Yes in the product direction — same personalised agent as your lesson admin, not a second product. It is built to listen across public agency Telegram channels the instant fits post, format your details to each agency’s requirements, prepare an apply you still confirm, and remember attempts across channels that otherwise keep separate records. Lesson admin (students, schedule, payments) is the daily-driver first; assignment handling attaches later. It is not a parent marketplace and it does not apply without your say-so.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will Tutor Atlas poach my students or share my book?</summary>
+            <p>No. Your student book stays yours. Privacy and trust come first. We are not here to advertise your relationships.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do parents need an account?</summary>
+            <p>Not in the first release. You work with the agent; parents receive what you already send today — for example paste-ready bill text you copy into WhatsApp. The agent does not message parents for you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Who is Tutor Atlas for?</summary>
+            <p>Independent home tutors in Singapore who run their own students and want evenings back from admin — a clear book for lessons, schedule and payments, paste-ready bills for WhatsApp, and (later on the same agent) assignment-channel memory when you have capacity. If you mainly want a parent marketplace, this waitlist is not the right door.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is pricing listed here?</summary>
+            <p>No. Public pricing is not on this page. Join the waitlist if fuss-free admin on standby fits how you already teach. We will share commercial details when early access is relevant.</p>
+          </details>
+          <details class="faq-item">
+            <summary>When will it launch?</summary>
+            <p>We are collecting high intent tutors first. Timing depends on build readiness with our technical partner. Waitlist members hear first.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <strong>Tutor Atlas</strong>
+          <p>Your PA for the book — lessons, schedule, payments — and channels later.</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#waitlist">Join the waitlist</a>
+        <a href="#faq">FAQ</a>
+        <a href="#trust">Privacy</a>
+        <a href="#trust">Terms</a>
+      </nav>
+      <p class="footer-copy">© <span data-year></span> Tutor Atlas. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=tighten-problem-2" defer></script>
+</body>
+</html>
