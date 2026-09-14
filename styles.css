@@ -2141,8 +2141,11 @@ summary,
   line-height: 1.25rem;
 }
 
-/* Reveals */
-.reveal {
+/* Reveals.
+   Revealed is the DEFAULT state, so the page is readable with no JS, a blocked
+   script.js, or a browser without IntersectionObserver. script.js opts in to the
+   animation by putting .js-reveal on <html>. Never hide .reveal unconditionally. */
+.js-reveal .reveal {
   opacity: 0;
   transform: translateY(4rem);
   filter: blur(8px);
@@ -2152,7 +2155,7 @@ summary,
     filter 900ms var(--ease-fluid);
 }
 
-.reveal.is-inview {
+.js-reveal .reveal.is-inview {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
@@ -2194,7 +2197,8 @@ summary,
     transition: none !important;
   }
 
-  .reveal {
+  .reveal,
+  .js-reveal .reveal {
     opacity: 1;
     transform: none;
     filter: none;

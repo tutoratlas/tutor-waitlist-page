@@ -37,10 +37,21 @@
     if (event.key === "Escape") setNavOpen(false);
   });
 
-  /* Scroll reveals — IntersectionObserver only */
-  if (!prefersReducedMotion) {
+  /* Scroll reveals — IntersectionObserver only.
+   * .reveal is visible by default in the stylesheet; we add .js-reveal to <html>
+   * only once we know we can animate AND can undo it, so a failure here leaves
+   * the page readable rather than blank below the hero.
+   *
+   * threshold MUST stay 0: a section taller than viewport/threshold can never
+   * expose that fraction of itself at once and would stay hidden forever. At
+   * 360x400 the two tallest sections measure ~2473px and ~2377px against a
+   * 2222px ceiling under the old 0.18 — verified stuck at opacity 0. The
+   * rootMargin, not the threshold, is what delays the trigger.
+   */
+  if (!prefersReducedMotion && "IntersectionObserver" in window) {
     const revealEls = document.querySelectorAll(".reveal");
     if (revealEls.length) {
+      document.documentElement.classList.add("js-reveal");
       const revealObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -49,12 +60,10 @@
             revealObserver.unobserve(entry.target);
           });
         },
-        { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+        { threshold: 0, rootMargin: "0px 0px -8% 0px" }
       );
       revealEls.forEach((el) => revealObserver.observe(el));
     }
-  } else {
-    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-inview"));
   }
 
   /* Tagline word reveal (Elaya B11) */
