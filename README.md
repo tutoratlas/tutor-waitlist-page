@@ -2,7 +2,7 @@
 
 Static tutor-facing waitlist page. British English. No framework, no build step, no env vars.
 
-**Live:** [https://tutor.tutoratlas.sg](https://tutor.tutoratlas.sg) — held out of search, form off. See both holds below.
+**Live:** [https://tutor.tutoratlas.sg](https://tutor.tutoratlas.sg) — held out of search while the Basin waitlist form is wired for launch. See the SEO hold below.
 
 ## Deploy
 
@@ -32,7 +32,7 @@ It was deployed to the Vercel project `tutoratlas-waitlist-v2` under team `jhs-p
 
 ## SEO hold (do not lift yet)
 
-The page is deliberately out of search until the waitlist form is ready. The draft waitlist privacy notice and terms now exist, but the form remains off. Flip these together on the day the form starts taking real submissions, not before:
+The page is deliberately out of search until the later hosting, SEO, share-preview, redirect, and final walkthrough checks pass. The waitlist form can be wired while search indexing stays disabled. Do not flip these in a form-only change:
 
 - `<meta name="robots" content="noindex, nofollow">` on `index.html` and `404.html`
 - `robots.txt`: `User-agent: *` / `Disallow: /`
@@ -66,30 +66,53 @@ The observer's `threshold` must stay `0`. A section taller than `viewport / thre
 
 The tagline observer still uses `threshold: 0.45`. That was measured at the same viewports — 0.19 max ratio against a 2.22 ceiling — and is fine.
 
-## Form: disabled
+## Form: Basin waitlist
 
-The waitlist form **does not collect and does not submit**. Submit is disabled. There is **no** `WAITLIST_ENDPOINT` and **no** POST to `example.com` or any placeholder.
+The waitlist form posts to Basin through the public form endpoint committed in `index.html`:
 
-Tutor-facing copy: the waitlist **opens shortly**.
+```text
+https://usebasin.com/f/0184c01ee34e
+```
 
-**Form-back lock** (when the form returns — not now):
+This is a public form action, not a secret. GitHub Pages does not need a GitHub secret, API key, or build-time environment variable for submissions. If Basin ever requires a credential, do **not** expose it in static HTML or JavaScript; add a server-side proxy or stop and redesign the submission path.
 
-- name + Telegram handle (not WhatsApp)
-- explicit consent checkbox, unticked by default
-- live privacy policy URL on the form before any real submit
-- real endpoint we control
+The form collects only:
 
-`privacy.html` and `terms.html` are draft waitlist-only pages pending captain and jiehao review. They do not re-enable collection. TUT-99 is the review of styling, SEO flip, PDPA consent, and the form.
+- name
+- Telegram handle
+- explicit waitlist consent
+
+It does **not** ask for WhatsApp, student, parent, school, billing, address, or lesson details. The consent checkbox must stay required and unticked by default, and must link to the live `privacy.html` and `terms.html` pages.
+
+`script.js` provides client-side validation, duplicate-submit protection, accessible field errors, clear failure guidance, and on-page success copy. The plain HTML form still has a real Basin `action` for no-JavaScript fallback.
+
+### Basin operations
+
+Production Basin setup for this form is an external pre-live check:
+
+- Form: Tutor Atlas waitlist, endpoint above.
+- Retention: set the Basin form/submission retention to **365 days**.
+- DPA/terms posture: reflected in `privacy.html`; Basin is the form processor and its DPA is part of Basin's terms.
+
+This repository cannot verify the Basin dashboard setting. Before treating the form as production-ready, log in to Basin and confirm the `0184c01ee34e` form retention is set to 365 days. Do not claim that dashboard setting is configured from repository evidence alone.
+
+Manual deletion procedure:
+
+1. Receive the deletion request at `hello@tutoratlas.sg`.
+2. Ask the requester to identify the submitted name or Telegram handle.
+3. Confirm control through the submitted Telegram account before deleting, because a public handle is not a stable identity key.
+4. In Basin, open the Tutor Atlas waitlist form, search submissions for the matching name or Telegram handle, and delete the matching submission.
+5. Reply to confirm deletion once the Basin record is removed.
 
 ## What is in this repo (site only)
 
 | File | Role |
 |---|---|
 | `index.html` | Page |
-| `privacy.html` | Draft waitlist-only privacy notice |
-| `terms.html` | Draft short waitlist terms |
+| `privacy.html` | Waitlist-only privacy notice |
+| `terms.html` | Short waitlist terms |
 | `styles.css` | Layout and tokens |
-| `script.js` | Nav, reveals, form lock |
+| `script.js` | Nav, reveals, Basin form validation/submission |
 | `robots.txt` | `Disallow: /` |
 | `CNAME` | Custom domain for GitHub Pages |
 | `favicon.svg` | Brand mark |

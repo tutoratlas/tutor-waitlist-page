@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=tighten-problem-2">
+  <link rel="stylesheet" href="styles.css?v=tut-104-basin-form">
 
   <script type="application/ld+json">
   {
@@ -772,31 +772,46 @@
         <p class="eyebrow">Early access</p>
         <h2 id="waitlist-heading">Want evenings back — and energy left for students?</h2>
         <p class="section-lead">
-          The waitlist opens shortly. We are not collecting names or contact details on this page until we can store them properly. The product is unchanged: a personalised PA for your book — lesson logs, schedule and payments, paste-ready bills for WhatsApp — with assignment-channel memory built to follow on the same agent. No public pricing on this page.
+          Join the waitlist for early access. We ask only for your name and Telegram handle so we can contact you when Tutor Atlas is ready for the next tutors. No WhatsApp number, no public pricing, and no Telegram handle verification at this step.
         </p>
 
-        <div class="form-shell is-hold" data-form-shell>
-          <p class="form-hold" role="status">The waitlist opens shortly. Please do not send details here — we cannot keep them yet.</p>
-          <form class="waitlist-form is-disabled" id="waitlist-form" data-waitlist-form aria-disabled="true">
-            <fieldset disabled>
-              <legend class="visually-hidden">Waitlist (closed)</legend>
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" autocomplete="off" maxlength="80" placeholder="Not collecting yet" disabled>
+        <div class="form-shell" data-form-shell>
+          <p class="form-hold">We will use these details only for Tutor Atlas early-access contact.</p>
+          <form class="waitlist-form" id="waitlist-form" data-waitlist-form action="https://usebasin.com/f/0184c01ee34e" method="POST">
+            <fieldset data-form-fields>
+              <legend class="visually-hidden">Join the Tutor Atlas waitlist</legend>
+              <div class="field" data-field="name">
+                <label for="name">Name <span class="req">required</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Your name" required aria-describedby="name-error" aria-invalid="false">
+                <p class="field-error" id="name-error" data-error-for="name" aria-live="polite"></p>
               </div>
-              <div class="field">
-                <label for="contact">Telegram handle</label>
-                <input id="contact" name="telegram" type="text" autocomplete="off" maxlength="32" placeholder="Not collecting yet" disabled>
+              <div class="field" data-field="telegram">
+                <label for="telegram">Telegram handle <span class="req">required</span></label>
+                <input id="telegram" name="telegram" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="33" pattern="^@?[A-Za-z][A-Za-z0-9_]{4,31}$" placeholder="@yourhandle" required aria-describedby="telegram-hint telegram-error" aria-invalid="false">
+                <p class="field-hint" id="telegram-hint">Use your public Telegram username, with or without @. It must be 5–32 letters, numbers, or underscores, starting with a letter.</p>
+                <p class="field-error" id="telegram-error" data-error-for="telegram" aria-live="polite"></p>
+              </div>
+              <div class="field checkbox-field" data-field="consent">
+                <input id="consent" name="consent" type="checkbox" value="yes" required aria-describedby="consent-error" aria-invalid="false">
+                <label for="consent">
+                  I agree to Tutor Atlas using my name and Telegram handle to contact me about early access, and I have read the <a href="/privacy.html" target="_blank" rel="noopener">waitlist privacy notice</a> and <a href="/terms.html" target="_blank" rel="noopener">waitlist terms</a>.
+                </label>
+                <p class="field-error" id="consent-error" data-error-for="consent" aria-live="polite"></p>
               </div>
             </fieldset>
             <p class="form-note">
-              When the list opens we will ask for your name and Telegram handle, with consent and a live privacy notice — not a WhatsApp number on an unbacked form.
+              Submitting sends the form to Basin. No Telegram bot message is sent and the handle is not verified here. If submission fails, your typed details stay on this page so you can try again or email <a href="mailto:hello@tutoratlas.sg">hello@tutoratlas.sg</a>.
             </p>
-            <button class="btn btn-primary btn-block" type="button" data-submit disabled>
-              <span data-submit-label>Waitlist opens shortly</span>
+            <button class="btn btn-primary btn-block" type="submit" data-submit>
+              <span data-submit-label>Join the waitlist</span>
             </button>
-            <p class="form-status" data-form-status role="status" aria-live="polite">The waitlist opens shortly.</p>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
           </form>
+          <div class="success-panel" data-success-panel role="status" tabindex="-1" hidden>
+            <h3>You are on the waitlist.</h3>
+            <p>Thanks — we received your name and Telegram handle<span data-success-handle></span>. We will use it only to contact you about Tutor Atlas early access.</p>
+            <p>No Telegram bot message has been sent from this form, and the handle has not been verified yet.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -863,6 +878,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=tighten-problem-2" defer></script>
+  <script src="script.js?v=tut-104-basin-form" defer></script>
 </body>
 </html>
