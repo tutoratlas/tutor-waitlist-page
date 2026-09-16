@@ -32,7 +32,7 @@ It was deployed to the Vercel project `tutoratlas-waitlist-v2` under team `jhs-p
 
 ## SEO hold (do not lift yet)
 
-The page is deliberately out of search until **both** the form and the privacy policy are ready. Flip these together on that day, not before:
+The page is deliberately out of search until the waitlist form is ready. The draft waitlist privacy notice and terms now exist, but the form remains off. Flip these together on the day the form starts taking real submissions, not before:
 
 - `<meta name="robots" content="noindex, nofollow">` on `index.html` and `404.html`
 - `robots.txt`: `User-agent: *` / `Disallow: /`
@@ -79,13 +79,15 @@ Tutor-facing copy: the waitlist **opens shortly**.
 - live privacy policy URL on the form before any real submit
 - real endpoint we control
 
-Blocked on the captain choosing a form service and on the policy pages being written. TUT-99 is the review of styling, SEO flip, PDPA consent, and the form.
+`privacy.html` and `terms.html` are draft waitlist-only pages pending captain and jiehao review. They do not re-enable collection. TUT-99 is the review of styling, SEO flip, PDPA consent, and the form.
 
 ## What is in this repo (site only)
 
 | File | Role |
 |---|---|
 | `index.html` | Page |
+| `privacy.html` | Draft waitlist-only privacy notice |
+| `terms.html` | Draft short waitlist terms |
 | `styles.css` | Layout and tokens |
 | `script.js` | Nav, reveals, form lock |
 | `robots.txt` | `Disallow: /` |

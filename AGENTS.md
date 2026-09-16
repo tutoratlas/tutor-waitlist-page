@@ -15,7 +15,7 @@ Sharp edges that have each already been broken once, all explained in `README.md
 - **`.reveal` must stay visible by default**; `script.js` opts in to the animation via `.js-reveal`. A bare `.reveal { opacity: 0 }` blanks the whole page below the hero whenever the script fails to run.
 - **The reveal observer's `threshold` must stay `0`.** A section taller than `viewport / threshold` can never expose that fraction of itself and stays hidden forever.
 
-Two things are under a deliberate hold and are **not** to be changed without the captain's decision: the `noindex` meta plus the `robots.txt` disallow, and the disabled waitlist form and its consent text. They lift together, when the form and the privacy policy are both ready.
+Two things are under a deliberate hold and are **not** to be changed without the captain's decision: the `noindex` meta plus the `robots.txt` disallow, and the disabled waitlist form and its consent text. They lift together only when `README.md` says the form may take real submissions.
 
 Verify changes against the rendered page, not only the source — several of the above look fine in the markup.
 
