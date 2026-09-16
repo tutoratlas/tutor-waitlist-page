@@ -32,9 +32,9 @@ It was deployed to the Vercel project `tutoratlas-waitlist-v2` under team `jhs-p
 
 ## SEO hold (do not lift yet)
 
-The page is deliberately out of search until the later hosting, SEO, share-preview, redirect, and final walkthrough checks pass. The waitlist form can be wired while search indexing stays disabled. Do not flip these in a form-only change:
+The site is deliberately out of search until the later hosting, SEO, share-preview, redirect, and final walkthrough checks pass. The waitlist form can be wired while search indexing stays disabled. Do not flip these in a form-only change:
 
-- `<meta name="robots" content="noindex, nofollow">` on `index.html` and `404.html`
+- `<meta name="robots" content="noindex, nofollow">` on every public HTML page (`index.html`, `404.html`, `privacy.html`, and `terms.html`)
 - `robots.txt`: `User-agent: *` / `Disallow: /`
 - ~~`X-Robots-Tag: noindex, nofollow`~~ — no longer served, see above
 
