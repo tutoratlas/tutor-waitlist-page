@@ -2,7 +2,7 @@
 
 Static tutor-facing waitlist page. British English. No framework, no build step, no env vars.
 
-**Live:** [https://tutor.tutoratlas.sg](https://tutor.tutoratlas.sg) — held out of search while the Basin waitlist form is wired for launch. See the SEO hold below.
+**Live:** [https://tutor.tutoratlas.sg](https://tutor.tutoratlas.sg) — held out of search until the later launch checks pass. See the SEO hold below.
 
 ## Deploy
 
