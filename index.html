@@ -787,8 +787,8 @@
               </div>
               <div class="field" data-field="telegram">
                 <label for="telegram">Telegram handle <span class="req">required</span></label>
-                <input id="telegram" name="telegram" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="33" pattern="^@?[A-Za-z][A-Za-z0-9_]{4,31}$" placeholder="@yourhandle" required aria-describedby="telegram-hint telegram-error" aria-invalid="false">
-                <p class="field-hint" id="telegram-hint">Use your public Telegram username, with or without @. It must be 5–32 letters, numbers, or underscores, starting with a letter.</p>
+                <input id="telegram" name="telegram" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="33" pattern="^@?[A-Za-z][A-Za-z0-9_]{3,30}[A-Za-z0-9]$" placeholder="@yourhandle" required aria-describedby="telegram-hint telegram-error" aria-invalid="false">
+                <p class="field-hint" id="telegram-hint">Use your public Telegram username, with or without @. It must be 5–32 letters, numbers, or underscores, starting with a letter and ending with a letter or number.</p>
                 <p class="field-error" id="telegram-error" data-error-for="telegram" aria-live="polite"></p>
               </div>
               <div class="field checkbox-field" data-field="consent">

@@ -105,7 +105,7 @@
       telegram: form.elements.telegram,
       consent: form.elements.consent,
     };
-    const telegramPattern = /^@?[A-Za-z][A-Za-z0-9_]{4,31}$/;
+    const telegramPattern = /^@?[A-Za-z][A-Za-z0-9_]{3,30}[A-Za-z0-9]$/;
     let isSubmitting = false;
 
     const setStatus = (message, isError = false) => {
@@ -144,7 +144,7 @@
         setFieldError("telegram", "Enter your Telegram handle.");
         if (!firstInvalid) firstInvalid = fields.telegram;
       } else if (!telegramPattern.test(telegram)) {
-        setFieldError("telegram", "Enter a valid Telegram handle: 5–32 letters, numbers, or underscores, starting with a letter. @ is optional.");
+        setFieldError("telegram", "Enter a valid Telegram handle: 5–32 letters, numbers, or underscores, starting with a letter and ending with a letter or number. @ is optional.");
         if (!firstInvalid) firstInvalid = fields.telegram;
       } else {
         setFieldError("telegram", "");
