@@ -40,7 +40,31 @@ The site is deliberately out of search until the later hosting, SEO, share-previ
 
 The hold was three layers and is now two. Both remaining layers are real and working, but it is thinner than it looks.
 
-Canonical and Open Graph URLs now correctly name `https://tutor.tutoratlas.sg/`.
+Canonical, Open Graph, Twitter, and JSON-LD URLs should name `https://tutor.tutoratlas.sg/`. The policy pages have canonical URLs on the same host.
+
+`sitemap.xml` is present so the final go-live can expose a normal sitemap without another file change, but it does **not** lift the current search hold while `robots.txt` still disallows `/` and the pages still carry `noindex`.
+
+## Launch-mechanics checks
+
+Repeat these before the final walkthrough and again immediately after the go-live search-index flip:
+
+```bash
+gh-axi api /repos/tutoratlas/tutor-waitlist-page/pages
+curl -sSIL https://tutor.tutoratlas.sg/ \
+  https://tutor.tutoratlas.sg/privacy.html \
+  https://tutor.tutoratlas.sg/terms.html \
+  https://tutor.tutoratlas.sg/sitemap.xml \
+  https://tutor.tutoratlas.sg/og-image.png \
+  https://tutor.tutoratlas.sg/robots.txt
+curl -sSIL https://tutoratlas-waitlist-v2.vercel.app/
+```
+
+Expected pre-go-live evidence:
+
+- GitHub Pages reports `cname: tutor.tutoratlas.sg`, source `main`/`/`, `https_enforced: true`, and an approved certificate for `tutor.tutoratlas.sg`.
+- The canonical host returns 200 for `/`, `privacy.html`, `terms.html`, `sitemap.xml`, `og-image.png`, and `robots.txt`.
+- `og-image.png` is served as `image/png` and remains 1200x630.
+- The old Vercel address `https://tutoratlas-waitlist-v2.vercel.app/` must not serve duplicate waitlist content. During TUT-106 it returned Vercel's plain 404, which is acceptable retirement evidence for this repo. If a product decision later requires redirecting that old host, that is a Vercel project/admin action outside this repository.
 
 ## Social preview image
 
@@ -114,6 +138,7 @@ Manual deletion procedure:
 | `styles.css` | Layout and tokens |
 | `script.js` | Nav, reveals, Basin form validation/submission |
 | `robots.txt` | `Disallow: /` |
+| `sitemap.xml` | Canonical sitemap for the final go-live search-index flip |
 | `CNAME` | Custom domain for GitHub Pages |
 | `favicon.svg` | Brand mark |
 | `og-image.png` | Social preview (shipped) |
