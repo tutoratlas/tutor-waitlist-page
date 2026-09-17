@@ -2,7 +2,7 @@
 
 Static tutor-facing waitlist page. British English. No framework, no build step, no env vars.
 
-**Live:** [https://tutor.tutoratlas.sg](https://tutor.tutoratlas.sg) — held out of search until the later launch checks pass. See the SEO hold below.
+**Live:** [https://tutor.tutoratlas.sg](https://tutor.tutoratlas.sg) — public go-live for the site/indexing change is approved. See the launch checks below.
 
 ## Deploy
 
@@ -25,26 +25,31 @@ It was deployed to the Vercel project `tutoratlas-waitlist-v2` under team `jhs-p
 | Header it set | Status on GitHub Pages |
 |---|---|
 | `Referrer-Policy: strict-origin-when-cross-origin` | **Recovered** as `<meta name="referrer">` in `index.html` |
-| `X-Robots-Tag: noindex, nofollow` | **Not served.** The hold still holds by other means — see below |
+| `X-Robots-Tag: noindex, nofollow` | **Not served.** Search indexing is controlled in files, not headers — see below |
 | `X-Content-Type-Options: nosniff` | **Gone, and not recoverable.** There is no markup equivalent |
 
 `X-Content-Type-Options: nosniff` cannot be restored on this host by any change to these files. Do not assume it is being sent. Restoring it needs a host that can set headers — a proxy in front of Pages, or moving off Pages. Same for any future header, including CSP, which is only partially expressible as a `<meta http-equiv>`.
 
-## SEO hold (do not lift yet)
+## Search indexing release state
 
-The site is deliberately out of search until the later hosting, SEO, share-preview, redirect, and final walkthrough checks pass. The waitlist form can be wired while search indexing stays disabled. Do not flip these in a form-only change:
+Public go-live is approved for this site/indexing change: the home page is indexable and `robots.txt` no longer disallows crawling `/`. Keep future form-only or copy-only changes from reintroducing a crawl hold unless a new launch decision explicitly says to.
 
-- `<meta name="robots" content="noindex, nofollow">` on every public HTML page (`index.html`, `404.html`, `privacy.html`, and `terms.html`)
-- `robots.txt`: `User-agent: *` / `Disallow: /`
-- ~~`X-Robots-Tag: noindex, nofollow`~~ — no longer served, see above
+Current indexing controls:
 
-The hold was three layers and is now two. Both remaining layers are real and working, but it is thinner than it looks.
+- `index.html` has no page-level `noindex`/`nofollow` robots meta.
+- `robots.txt` allows `/` and advertises the canonical sitemap.
+- `privacy.html`, `terms.html`, and `404.html` still carry `noindex, nofollow`; they are support pages, not search landing pages.
+- ~~`X-Robots-Tag: noindex, nofollow`~~ — no longer served, see above.
 
 Canonical, Open Graph, Twitter, and JSON-LD URLs should name `https://tutor.tutoratlas.sg/`. The policy pages have canonical URLs on the same host.
 
-`sitemap.xml` is present so the final go-live can expose a normal sitemap without another file change, but it does **not** lift the current search hold while `robots.txt` still disallows `/` and the pages still carry `noindex`.
+`sitemap.xml` is present and should stay aligned with the canonical `https://tutor.tutoratlas.sg/` URLs.
 
 ## Launch-mechanics checks
+
+Announcement audience, channel, and copy are still unspecified. Do **not** publish or invent an announcement from this repository change alone.
+
+After this change merges, launch still needs GitHub Pages deployment, crawlability, desktop/mobile rendering, policy links, redirects/retired-host evidence, share preview, and one controlled Basin submission verified.
 
 Repeat these before the final walkthrough and again immediately after the go-live search-index flip:
 
@@ -59,7 +64,7 @@ curl -sSIL https://tutor.tutoratlas.sg/ \
 curl -sSIL https://tutoratlas-waitlist-v2.vercel.app/
 ```
 
-Expected pre-go-live evidence:
+Expected post-merge evidence:
 
 - GitHub Pages reports `cname: tutor.tutoratlas.sg`, source `main`/`/`, `https_enforced: true`, and an approved certificate for `tutor.tutoratlas.sg`.
 - The canonical host returns 200 for `/`, `privacy.html`, `terms.html`, `sitemap.xml`, `og-image.png`, and `robots.txt`.
@@ -137,8 +142,8 @@ Manual deletion procedure:
 | `terms.html` | Short waitlist terms |
 | `styles.css` | Layout and tokens |
 | `script.js` | Nav, reveals, Basin form validation/submission |
-| `robots.txt` | `Disallow: /` |
-| `sitemap.xml` | Canonical sitemap for the final go-live search-index flip |
+| `robots.txt` | Crawl allowlist and canonical sitemap reference |
+| `sitemap.xml` | Canonical sitemap for the go-live search-index state |
 | `CNAME` | Custom domain for GitHub Pages |
 | `favicon.svg` | Brand mark |
 | `og-image.png` | Social preview (shipped) |

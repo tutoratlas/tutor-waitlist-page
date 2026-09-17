@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://tutor.tutoratlas.sg/sitemap.xml
