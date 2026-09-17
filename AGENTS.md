@@ -6,7 +6,7 @@ Static waitlist page. **No build step, no framework, no dependencies** — the f
 
 Hosted on **GitHub Pages** at `tutor.tutoratlas.sg` (`CNAME`). It used to be on Vercel — ignore any Vercel-shaped instruction you find.
 
-`README.md` is authoritative for deploy, the SEO hold, the response headers that Pages cannot send, and how to re-raster the OG image. Read it before changing `index.html`, `styles.css`, or `script.js`.
+`README.md` is authoritative for deploy, the search-indexing release state, the response headers that Pages cannot send, and how to re-raster the OG image. Read it before changing `index.html`, `styles.css`, or `script.js`.
 
 Sharp edges that have each already been broken once, all explained in `README.md`:
 
@@ -15,7 +15,7 @@ Sharp edges that have each already been broken once, all explained in `README.md
 - **`.reveal` must stay visible by default**; `script.js` opts in to the animation via `.js-reveal`. A bare `.reveal { opacity: 0 }` blanks the whole page below the hero whenever the script fails to run.
 - **The reveal observer's `threshold` must stay `0`.** A section taller than `viewport / threshold` can never expose that fraction of itself and stays hidden forever.
 
-The search-indexing hold is still deliberate: do not remove the `noindex` meta or loosen `robots.txt` until the later launch checks say to. The waitlist form itself is wired through Basin; `README.md` is authoritative for the endpoint, consent requirements, retention check, and deletion procedure.
+The public home page is approved for search indexing: do not reintroduce the home-page `noindex` meta or a `robots.txt` crawl disallow without a new launch decision. Privacy, terms, and 404 remain support pages with `noindex`; see `README.md` for the current indexing state. The waitlist form itself is wired through Basin; `README.md` is authoritative for the endpoint, consent requirements, retention check, and deletion procedure.
 
 Verify changes against the rendered page, not only the source — several of the above look fine in the markup.
 
