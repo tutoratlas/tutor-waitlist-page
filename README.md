@@ -51,7 +51,7 @@ Announcement audience, channel, and copy are still unspecified. Do **not** publi
 
 After this change merges, launch still needs GitHub Pages deployment, crawlability, desktop/mobile rendering, policy links, redirects/retired-host evidence, share preview, and one controlled Basin submission verified.
 
-Repeat these before the final walkthrough and again immediately after the go-live search-index flip:
+Repeat these before the final walkthrough and again immediately after GitHub Pages deploys this merge:
 
 ```bash
 gh-axi api /repos/tutoratlas/tutor-waitlist-page/pages
@@ -64,7 +64,7 @@ curl -sSIL https://tutor.tutoratlas.sg/ \
 curl -sSIL https://tutoratlas-waitlist-v2.vercel.app/
 ```
 
-Expected post-merge evidence:
+Expected post-deploy evidence:
 
 - GitHub Pages reports `cname: tutor.tutoratlas.sg`, source `main`/`/`, `https_enforced: true`, and an approved certificate for `tutor.tutoratlas.sg`.
 - The canonical host returns 200 for `/`, `privacy.html`, `terms.html`, `sitemap.xml`, `og-image.png`, and `robots.txt`.
@@ -117,7 +117,7 @@ It does **not** ask for WhatsApp, student, parent, school, billing, address, or 
 
 ### Basin operations
 
-Production Basin setup for this form is an external pre-live check:
+Production Basin setup for this form is an external launch readiness check:
 
 - Form: Tutor Atlas waitlist, endpoint above.
 - Retention: set the Basin form/submission retention to **365 days**.

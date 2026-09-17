@@ -47,9 +47,14 @@ def require(condition, message):
 
 def validate_markup_contract():
     index = parse_html("index.html")
+    index_robot_metas = [meta for meta in index.meta if meta.get("name") == "robots"]
     require(
-        any(meta.get("name") == "robots" and meta.get("content") == "noindex, nofollow" for meta in index.meta),
-        "index.html must stay noindex,nofollow for the launch hold",
+        all("noindex" not in meta.get("content", "").lower() for meta in index_robot_metas),
+        "index.html must not set noindex after the search-indexing release",
+    )
+    require(
+        all("nofollow" not in meta.get("content", "").lower() for meta in index_robot_metas),
+        "index.html must not set nofollow after the search-indexing release",
     )
 
     forms = [form for form in index.forms if form["attrs"].get("id") == "waitlist-form"]
@@ -71,11 +76,17 @@ def validate_markup_contract():
         parsed = parse_html(page)
         require(
             any(meta.get("name") == "robots" and meta.get("content") == "noindex, nofollow" for meta in parsed.meta),
-            f"{page} must stay noindex,nofollow for the launch hold",
+            f"{page} must stay noindex,nofollow as a support page",
         )
 
     robots = (ROOT / "robots.txt").read_text(encoding="utf-8")
-    require("User-agent: *" in robots and "Disallow: /" in robots, "robots.txt must keep search indexing disabled")
+    require("User-agent: *" in robots, "robots.txt must address all crawlers")
+    require("Disallow: /" not in robots, "robots.txt must not block the public home page")
+    require("Allow: /" in robots, "robots.txt must allow crawling from the site root")
+    require(
+        "Sitemap: https://tutor.tutoratlas.sg/sitemap.xml" in robots,
+        "robots.txt must advertise the canonical sitemap",
+    )
 
 
 def validate_served_pages():
@@ -87,7 +98,7 @@ def validate_served_pages():
     )
     try:
         time.sleep(1)
-        for path in ["/", "/privacy.html", "/terms.html", "/robots.txt"]:
+        for path in ["/", "/privacy.html", "/terms.html", "/robots.txt", "/sitemap.xml"]:
             with urlopen(f"http://127.0.0.1:5174{path}", timeout=5) as response:
                 body = response.read().decode("utf-8")
                 require(response.status == 200, f"{path} should return HTTP 200")
